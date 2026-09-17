@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happy Paws | Dog Walking Preparation Lab</title>
+<style>
+:root{--bg:#fbfaf7;--ink:#1f2937;--muted:#6b7280;--card:#fff;--line:#e5e7eb;--green:#2f855a;--green2:#48bb78;--shadow:0 18px 50px rgba(31,41,55,.10)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}a{text-decoration:none;color:inherit}.wrap{width:min(1120px,92vw);margin:auto}nav{position:sticky;top:0;z-index:20;background:#fbfaf7ef;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.navin{height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:900;display:flex;align-items:center;gap:9px}.links{display:flex;gap:18px;color:#4b5563;font-size:.95rem}.cta{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:14px;padding:12px 18px;background:var(--green);color:#fff;font-weight:800;cursor:pointer}.cta.alt{background:#fff;color:var(--ink);border:1px solid var(--line)}.hero{padding:76px 0 56px}.grid2{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center}.eyebrow{display:inline-flex;border:1px solid #dfe7df;background:#f0f8f2;padding:7px 11px;border-radius:999px;color:#276749;font-weight:800;font-size:.82rem}h1{font-size:clamp(3rem,7vw,6.2rem);line-height:.91;letter-spacing:-.065em;margin:20px 0}h1 span{color:var(--green)}.lead{font-size:1.18rem;color:#4b5563;max-width:690px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.note{font-size:.88rem;color:var(--muted);margin-top:14px}.heroCard,.card,.creditBox,.simInfo{background:#fff;border:1px solid var(--line);box-shadow:var(--shadow)}.heroCard{border-radius:28px;padding:24px}.dogphoto{min-height:360px;border-radius:22px;background:radial-gradient(circle at 20% 20%,rgba(255,255,255,.8),transparent 24%),linear-gradient(135deg,#d9f2df,#f9e6bd 55%,#d7e7ff);display:grid;place-items:center;position:relative;overflow:hidden}.dog{font-size:8rem;filter:drop-shadow(0 18px 18px rgba(0,0,0,.15))}.badge{position:absolute;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);padding:10px 12px;border-radius:14px;font-size:.86rem;font-weight:800}.b1{top:20px;left:18px}.b2{bottom:22px;right:18px}.b3{top:90px;right:20px}.section{padding:72px 0}.section h2{font-size:clamp(2rem,4.5vw,3.6rem);line-height:1;letter-spacing:-.045em;margin:0 0 14px}.intro{color:var(--muted);max-width:760px;margin-bottom:30px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{border-radius:22px;padding:22px;box-shadow:0 8px 24px rgba(31,41,55,.05)}.icon{font-size:1.8rem}.card h3{margin:10px 0 7px}.card p{color:#5b6470;margin:0}.band{background:#173f2d;color:#fff}.band .intro{color:#d1e7da}.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{background:#ffffff14;border:1px solid #ffffff26;border-radius:18px;padding:18px}.step strong{display:block;font-size:1.05rem;margin:4px 0}.step small{color:#d1e7da}.credit{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}.creditBox{border-radius:24px;padding:24px}.money{font-size:3.2rem;font-weight:900;letter-spacing:-.05em}.bar{height:16px;background:#eee;border-radius:999px;overflow:hidden;margin:14px 0}.bar span{display:block;height:100%;width:75%;background:linear-gradient(90deg,var(--green),var(--green2))}.ledger{display:grid;gap:10px;margin-top:14px}.row{display:flex;justify-content:space-between;border-bottom:1px dashed var(--line);padding-bottom:8px}.launch{background:linear-gradient(135deg,#fff8e7,#f0fff4);border:1px solid #eadfca;border-radius:28px;padding:30px}.checks{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:24px 0}.check{background:#fff;border:1px solid var(--line);padding:12px 14px;border-radius:14px}.phoneWrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:28px;align-items:center}.phone{width:320px;height:620px;margin:auto;border:10px solid #1d1d1f;border-radius:42px;background:linear-gradient(#202124,#0b0b0c);box-shadow:0 30px 80px rgba(0,0,0,.28);overflow:hidden;color:#fff}.notch{width:126px;height:22px;background:#050505;border-radius:0 0 18px 18px;margin:auto}.screen{height:calc(100% - 22px);padding:22px 18px;display:flex;flex-direction:column;align-items:center}.avatar{width:78px;height:78px;border-radius:50%;background:#2a2a2a;display:grid;place-items:center;font-size:40px;margin-top:15px}.phone h3{margin:12px 0 0;font-size:1.3rem}.sub{opacity:.66;font-size:.83rem}.status{margin:10px 0 8px;font-size:.9rem}.transcript{width:100%;flex:1;background:#ffffff0f;border-radius:16px;padding:12px;overflow:auto;font-size:.82rem;text-align:left}.msg{margin-bottom:10px}.who{font-weight:800}.controls{display:flex;gap:14px;margin-top:14px}.round{width:64px;height:64px;border-radius:50%;border:0;color:#fff;font-size:26px;cursor:pointer}#call{background:#22c55e}#hang{background:#ef4444;display:none}#mic{background:#3b82f6;display:none}.simInfo{border-radius:24px;padding:26px}.simInfo ul{padding-left:20px;color:#4b5563}small.disclaimer{display:block;margin-top:14px;color:#7c6b55}footer{padding:36px 0 52px;color:#6b7280;font-size:.9rem}@media(max-width:850px){.grid2,.credit,.phoneWrap{grid-template-columns:1fr}.cards,.flow{grid-template-columns:1fr 1fr}.links{display:none}}@media(max-width:560px){.cards,.flow,.checks{grid-template-columns:1fr}h1{font-size:3.25rem}.phone{width:300px;height:590px}}
+.pilotbar{background:#173f2d;color:#fff;text-align:center;padding:9px;font-size:.88rem}.pilotbar b{color:#9ce7b5}.workspace{background:linear-gradient(180deg,#f4faf5,#fbfaf7)}.kicker{color:var(--green);font-weight:900;text-transform:uppercase;letter-spacing:.09em;font-size:.76rem;margin-bottom:10px}.profileGrid,.checkGrid,.collab{display:grid;grid-template-columns:1.08fr .92fr;gap:20px}.panel{background:#fff;border:1px solid var(--line);border-radius:24px;padding:24px;box-shadow:0 10px 28px rgba(31,41,55,.06)}.profileList{display:grid;gap:12px}.profileItem{padding:14px 16px;background:#f8faf8;border:1px solid #e1ebe3;border-radius:16px}.profileItem strong{display:block;color:var(--green);font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px}.goalRing{width:180px;height:180px;border-radius:50%;display:grid;place-items:center;margin:8px auto 18px;background:conic-gradient(var(--green) calc(var(--progress)*1%),#e7eee9 0);position:relative}.goalRing:after{content:"";position:absolute;inset:15px;background:#fff;border-radius:50%}.goalRing div{position:relative;z-index:1;text-align:center}.goalRing b{font-size:3rem;line-height:1;display:block}.goalRing span{font-size:.8rem;color:var(--muted)}.metrics,.numbers{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.mini{background:#f8faf8;border:1px solid #e1ebe3;border-radius:14px;padding:12px;text-align:center}.mini b{display:block;font-size:1.3rem}.mini span{font-size:.74rem;color:var(--muted)}.mapGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.mapCard{padding:23px;border-radius:22px;background:#fff;border:1px solid var(--line)}.mapCard h3{margin:14px 0 8px}.mapCard p{color:var(--muted)}.num{width:34px;height:34px;border-radius:11px;display:grid;place-items:center;background:#edf8f0;color:var(--green);font-weight:900}.outcome{font-size:.84rem;background:#fff7db;border:1px solid #f2dc8c;padding:10px 12px;border-radius:12px;color:#705b17}.formGrid{display:grid;grid-template-columns:1fr 1fr;gap:17px}.field{display:grid;gap:7px}.full{grid-column:1/-1}.field label{font-weight:800;font-size:.9rem}.hint{font-size:.82rem;color:var(--muted)}input,select,textarea{width:100%;border:1px solid #cfd5dc;background:#fff;border-radius:13px;padding:12px 13px;color:var(--ink);font:inherit}textarea{min-height:100px;resize:vertical}.formActions,.toolRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.saved{font-weight:800;font-size:.88rem;align-self:center;min-height:1.3em}.result{margin-top:20px;background:#edf8f0;border:1px solid #cce6d3;border-radius:18px;padding:18px}.result[hidden]{display:none}.quote{font-size:1.02rem;border-left:4px solid var(--green);padding-left:14px;color:#334155}.role{padding:20px;border:1px solid var(--line);border-radius:18px;background:#fff}.role h3{margin-top:0}.role ul{padding-left:20px;color:var(--muted)}.history,.experiments{display:grid;gap:10px;margin-top:16px;max-height:520px;overflow:auto}.historyItem,.experiment{padding:13px;background:#f8faf8;border:1px solid #e1ebe3;border-radius:14px}.historyItem header{display:flex;justify-content:space-between;gap:10px}.historyItem p,.experiment small{display:block;margin:6px 0;color:var(--muted)}.empty{padding:22px;text-align:center;color:var(--muted);border:1px dashed #cfd5dc;border-radius:16px}.paid{display:inline-flex;background:#eaf8ee;color:var(--green);font-weight:900;border:1px solid #cde7d4;border-radius:999px;padding:7px 11px}.privacy{font-size:.83rem;color:#d1e7da;margin-top:14px}@media(max-width:900px){.profileGrid,.checkGrid,.collab{grid-template-columns:1fr}.mapGrid{grid-template-columns:1fr 1fr}}@media(max-width:600px){.mapGrid,.formGrid,.numbers,.metrics{grid-template-columns:1fr}.full{grid-column:auto}}@media print{nav,.pilotbar,.actions,.formActions,.toolRow,.phone,.privacy{display:none!important}.section{padding:28px 0}.panel,.card,.mapCard{box-shadow:none;break-inside:avoid}}
+.accessGate{position:fixed;inset:0;z-index:100;background:linear-gradient(145deg,#173f2d,#245b42);display:grid;place-items:center;padding:22px}.accessCard{width:min(470px,94vw);background:#fff;border-radius:28px;padding:30px;box-shadow:0 28px 90px rgba(0,0,0,.3)}.accessCard h1{font-size:2.5rem;line-height:1;margin:12px 0 14px;letter-spacing:-.045em}.accessCard p{color:var(--muted)}.accessCard form{display:grid;gap:12px;margin-top:20px}.accessError{color:#b42318;font-weight:800;min-height:1.4em}.accessNote{font-size:.78rem;color:var(--muted);margin-top:14px}.accessGranted .accessGate{display:none}.access-locked{overflow:hidden}.access-locked>nav,.access-locked>.pilotbar,.access-locked>main,.access-locked>footer{filter:blur(14px);pointer-events:none;user-select:none}
+</style>
+</head>
+<body class="access-locked">
+<div class="accessGate" id="accessGate" role="dialog" aria-modal="true" aria-labelledby="accessTitle">
+  <div class="accessCard">
+    <div class="eyebrow">🐾 Happy Paws preparation workspace</div>
+    <h1 id="accessTitle">Welcome back.</h1>
+    <p>Enter the founder's last name to open this planning and practice workspace.</p>
+    <form id="accessForm">
+      <label class="field" for="accessSurname"><span>Last name</span><input id="accessSurname" type="password" autocomplete="family-name" required></label>
+      <button class="cta" type="submit">Open workspace</button>
+      <div class="accessError" id="accessError" role="status"></div>
+    </form>
+    <div class="accessNote">This is a friendly access screen, not secure account authentication. No contact or payment information is stored on this public site.</div>
+  </div>
+</div>
+<nav>
+<div class="wrap navin">
+<a class="brand" href="#top">
+<span>🐾</span>
+<b>Happy Paws</b>
+</a>
+<div class="links">
+<a href="#profile">Profile</a>
+<a href="#launch-map">Preparation map</a>
+<a href="#questions">Questions</a>
+<a href="#marketing">Marketing</a>
+<a href="#simulator">Practice</a>
+<a href="#progress">Progress</a>
+</div>
+<a class="cta" href="#questions">Continue preparing</a>
+</div>
+</nav>
+<div class="pilotbar">
+<b>● Happy Paws living preparation workspace</b> &nbsp;•&nbsp; Planning and practice before launch</div>
+<main id="top">
+<section class="hero">
+<div class="wrap grid2">
+<div>
+<div class="eyebrow">🧪 Start safe • Learn for real • Grow with evidence</div>
+<h1>Build the dog business <span>before you risk it.</span>
+</h1>
+<p class="lead">Happy Paws is a preparation lab and a living business map. You can practice customer conversations, shape a safe service, explore marketing, and build toward trusted recurring-client relationships when you are ready.</p>
+<div class="actions">
+<a class="cta" href="#profile">See your preparation map</a>
+<a class="cta alt" href="#simulator">Practice a customer call</a>
+</div>
+<div class="note">Practice customers and money are simulated. Your goals, learning, and progress record are real.</div>
+</div>
+<div class="heroCard">
+<div class="dogphoto">
+<span class="badge b1">🎯 Goal: 5 regular clients</span>
+<span class="badge b3">🤝 Relationship-first</span>
+<span class="badge b2">🌱 Preparing one step at a time</span>
+<div class="dog">🐕‍🦺</div>
+</div>
+</div>
+</div>
+</section>
+<section id="profile" class="section workspace">
+  <div class="wrap">
+    <div class="kicker">Founder Profile • Completed</div>
+    <h2>The business begins with the person.</h2>
+    <p class="intro">Your answers are organized into a working profile. They are a starting point the plan can keep learning from.</p>
+    <div class="profileGrid">
+      <article class="panel"><div class="profileList">
+        <div class="profileItem"><strong>Long-term vision</strong>A profitable dog-walking business with regular clients, close relationships, and marketing that makes her easy to find.</div>
+        <div class="profileItem"><strong>Future first-month goal</strong>When you are ready to launch: five regular clients and the beginning of profitability.</div>
+        <div class="profileItem"><strong>Concerns to design around</strong>Getting the word out, physical walking, and the stress of controlling multiple dogs.</div>
+        <div class="profileItem"><strong>Needs identified</strong>Supplies, future help from at least one employee, and practical marketing support.</div>
+        <div class="profileItem"><strong>Strength to use</strong>Marketing studies you can connect to small, real-world experiments.</div>
+      </div></article>
+      <aside class="panel">
+        <div class="goalRing" id="goalRing" style="--progress:0"><div><b id="clientDisplay">0/5</b><span>regular clients</span></div></div>
+        <h3 style="text-align:center">Preparation dashboard</h3>
+        <div class="metrics"><div class="mini"><b id="leadTotal">0</b><span>leads</span></div><div class="mini"><b id="walkTotal">0</b><span>walks</span></div><div class="mini"><b id="profitTotal">$0</b><span>net result</span></div></div>
+      </aside>
+    </div>
+  </div>
+</section>
+<section id="launch-map" class="section">
+  <div class="wrap">
+    <div class="kicker">Personalized Launch Preparation Map</div>
+    <h2>Three tracks, one manageable next move.</h2>
+    <p class="intro">This is a flexible map rather than a rigid checklist. Real answers and experience decide what belongs next.</p>
+    <div class="mapGrid">
+      <article class="mapCard"><div class="num">1</div><h3>Safe starting service</h3><p>Choose dog count, walk length, availability, service area, supplies, and a meet-and-greet routine. Start with one household at a time rather than unfamiliar pack walks.</p><div class="outcome"><b>First evidence:</b> a service you can confidently explain and perform.</div></article>
+      <article class="mapCard"><div class="num">2</div><h3>Easier-to-find marketing</h3><p>Describe the best-fit client, write one clear promise, and test small messages where local dog owners already look and talk.</p><div class="outcome"><b>First evidence:</b> inquiries from people who understand the offer.</div></article>
+      <article class="mapCard"><div class="num">3</div><h3>Five recurring relationships</h3><p>When the business is ready, turn good first walks into trust, repeat scheduling, feedback, and referrals. Add employee capacity only after demand clarifies the help needed.</p><div class="outcome"><b>Future launch aim:</b> five regular clients and an honest profitability measure.</div></article>
+    </div>
+  </div>
+</section>
+<section id="questions" class="section band">
+  <div class="wrap">
+    <div class="kicker" style="color:#9ce7b5">Current assignment</div>
+    <h2>Your Best-Fit Client</h2>
+    <p class="intro">Answer what you know today. The answers create a first client-facing description and can change as the business learns.</p>
+    <form id="fitForm" class="panel">
+      <div class="formGrid">
+        <div class="field full"><label for="owner">1. Who would you most enjoy helping?</label><textarea id="owner" placeholder="Someone working long shifts, an older adult, a person with limited mobility, or a busy family."></textarea></div>
+        <div class="field"><label for="availability">2. When are you realistically available?</label><input id="availability" placeholder="Days and time windows"></div>
+        <div class="field"><label for="dogCount">3. What is your safe starting dog count?</label><select id="dogCount"><option value="">Choose what feels accurate today</option><option>One dog at a time</option><option>Up to two dogs from the same household</option><option>Decide after a meet-and-greet</option></select></div>
+        <div class="field full"><label for="area">4. What area would you like to serve?</label><input id="area" placeholder="A neighborhood, town, or travel radius"><span class="hint">A smaller starting area can reduce travel time and physical strain.</span></div>
+      </div>
+      <div class="formActions"><button class="cta" type="submit">Save answers and build draft</button><button class="cta alt" id="copyFit" type="button">Copy answers</button><span id="fitSaved" class="saved" role="status"></span></div>
+      <div id="fitResult" class="result" hidden><h3>First client-facing description</h3><p id="marketingDraft" class="quote"></p><p class="hint">A working draft for discussion—not a final public advertisement.</p></div>
+    </form>
+  </div>
+</section>
+<section id="marketing" class="section">
+  <div class="wrap">
+    <div class="kicker">Marketing Learning Lab</div>
+    <h2>Study it. Test it. Keep what works.</h2>
+    <p class="intro">Your college marketing learning is an asset. This space connects one marketing idea to one small test and an observable result.</p>
+    <div class="collab">
+      <article class="role"><h3>The founder contributes</h3><ul><li>Ideas from marketing courses</li><li>Knowledge of the client you want to serve</li><li>Comfort, energy, and service boundaries</li><li>What feels natural and trustworthy</li></ul></article>
+      <article class="role"><h3>Your guide supports</h3><ul><li>Organizing answers and keeping the project record</li><li>Preparing drafts, practice scenarios, and follow-ups</li><li>Tracking inquiries, tests, and recurring clients</li><li>Turning each result into a clearer next decision</li></ul></article>
+    </div>
+    <form id="experimentForm" class="panel" style="margin-top:18px">
+      <div class="formGrid"><div class="field"><label for="classIdea">Idea from class or experience</label><input id="classIdea" placeholder="Example: referrals build trust"></div><div class="field"><label for="channel">Where could we test it?</label><input id="channel" placeholder="Example: neighborhood group"></div><div class="field full"><label for="smallTest">One small test</label><textarea id="smallTest" placeholder="What can we try without building an entire campaign?"></textarea></div></div>
+      <div class="formActions"><button class="cta soft" type="submit">Add marketing experiment</button><span id="experimentSaved" class="saved"></span></div>
+      <div id="experimentList" class="experiments"></div>
+    </form>
+  </div>
+</section>
+<section id="how" class="section">
+<div class="wrap">
+<h2>The fake business is the prototype.</h2>
+<p class="intro">Instead of beginning with expensive software and pressure, the learner gets a working practice environment and gradually proves they can operate the business.</p>
+<div class="cards">
+<div class="card">
+<div class="icon">👤</div>
+<h3>Fake customers</h3>
+<p>Customers have different needs, budgets, personalities and objections. Practice answering naturally.</p>
+</div>
+<div class="card">
+<div class="icon">📅</div>
+<h3>Operations practice</h3>
+<p>Schedule walks, set prices, write policies, manage capacity and decide what happens next.</p>
+</div>
+<div class="card">
+<div class="icon">📄</div>
+<h3>Business paperwork</h3>
+<p>Practice agreements, quotes, invoices, notes and recordkeeping before real customers depend on them.</p>
+</div>
+<div class="card">
+<div class="icon">💸</div>
+<h3>Simulated money</h3>
+<p>See revenue, expenses, payroll and profit without confusing fake money with actual funds.</p>
+</div>
+<div class="card">
+<div class="icon">🧠</div>
+<h3>AI role-play</h3>
+<p>Talk with simulated customers who remember the scenario and respond to what you say.</p>
+</div>
+<div class="card">
+<div class="icon">🚀</div>
+<h3>Conversion path</h3>
+<p>When ready, convert useful pieces into a real website, CRM, calendar and customer process.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="section band">
+<div class="wrap">
+<h2>One small business. Four phases.</h2>
+<p class="intro">The sandbox lowers the emotional and financial stakes while someone learns how the work actually feels.</p>
+<div class="flow">
+<div class="step">
+<small>01</small>
+<strong>Imagine</strong>
+<span>Define the offer, customer, price and service area.</span>
+</div>
+<div class="step">
+<small>02</small>
+<strong>Simulate</strong>
+<span>Handle fake calls, messages, walks, complaints and income.</span>
+</div>
+<div class="step">
+<small>03</small>
+<strong>Prove</strong>
+<span>Show you can repeat operations and understand the numbers.</span>
+</div>
+<div class="step">
+<small>04</small>
+<strong>Launch</strong>
+<span>Replace simulation pieces with real-world accounts and customers.</span>
+</div>
+</div>
+</div>
+</section>
+<section id="credit" class="section">
+<div class="wrap credit">
+<div>
+<h2>Preparation should visibly lead somewhere.</h2>
+<p class="intro">Pilot participation is connected to clear work, useful practice, and decisions you can revisit when you are ready to launch.</p>
+<div class="creditBox">
+<div class="money">In progress</div>
+<div>Pre-launch preparation</div>
+<div class="bar">
+<span>
+</span>
+</div>
+<div class="ledger">
+<div class="row">
+<span>Founder Profile</span>
+<strong>Complete</strong>
+</div>
+<div class="row">
+<span>Launch Preparation Map</span>
+<strong>Complete</strong>
+</div>
+<div class="row">
+<span>Best-Fit Client profile</span>
+<strong>Next</strong>
+</div>
+</div>
+</div>
+</div>
+<div class="launch">
+<h3>What the preparation period should produce</h3>
+<p>A personalized record, a safe starting offer, a first marketing description, practice conversations, weekly evidence, and a review of what should happen next.</p>
+<div class="checks">
+<div class="check">✓ Personal answers retained</div>
+<div class="check">✓ Progress remains visible</div>
+<div class="check">✓ Marketing ideas can be tested</div>
+<div class="check">✓ Earlier weeks are not deleted</div>
+</div>
+<small class="disclaimer">This page supports planning and practice. It does not mean Happy Paws is open for customers or ready to take bookings.</small>
+</div>
+</div>
+</section>
+<section id="simulator" class="section">
+<div class="wrap phoneWrap">
+<div class="phone">
+<div class="notch">
+</div>
+<div class="screen">
+<div class="avatar">🐕</div>
+<h3>Sarah Miller</h3>
+<div class="sub">Potential Happy Paws customer</div>
+<div id="status" class="status">Ready to call</div>
+<div id="transcript" class="transcript">
+<div class="msg">
+<span class="who">Scenario:</span> Sarah needs someone to walk Bella on Tuesdays and Thursdays.</div>
+</div>
+<div class="controls">
+<button id="call" class="round" aria-label="Call">📞</button>
+<button id="mic" class="round" aria-label="Speak">🎙️</button>
+<button id="hang" class="round" aria-label="Hang up">⛔</button>
+</div>
+</div>
+</div>
+<div class="simInfo">
+<h2>Try the business, not just the lesson.</h2>
+<p class="intro">Press the green button. Sarah will speak. Press the microphone button to answer. Speech recognition is used when available, with typed conversation as a fallback.</p>
+<ul>
+<li>Sarah wants recurring dog walks.</li>
+<li>She has a budget and a concern about Bella.</li>
+<li>Your answer changes what she asks next.</li>
+<li>A fuller version can write the outcome into scheduling, CRM, pricing and finances.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="real" class="section">
+<div class="wrap launch">
+<h2>When the learner is ready: make it real.</h2>
+<p class="intro">The transition should feel like graduation, not starting over. Keep the useful work and replace simulated pieces with real accounts, policies, customers and transactions.</p>
+<div class="checks">
+<div class="check">✓ Offer defined</div>
+<div class="check">✓ Pricing tested</div>
+<div class="check">✓ Customer calls practiced</div>
+<div class="check">✓ Scheduling understood</div>
+<div class="check">✓ Expenses modeled</div>
+<div class="check">✓ Agreements reviewed</div>
+<div class="check">✓ Website prepared</div>
+<div class="check">✓ CRM workflow prepared</div>
+</div>
+<a href="#top" class="cta">🐾 Keep preparing Happy Paws</a>
+</div>
+</section>
+<section id="progress" class="section">
+  <div class="wrap">
+    <div class="kicker">Weekly and monthly continuity</div>
+    <h2>Record the lesson, then choose the next experiment.</h2>
+    <p class="intro">The newest check-in updates the preparation record. Earlier entries remain in the history instead of being deleted.</p>
+    <div class="checkGrid">
+      <form id="checkForm" class="panel">
+        <div class="formGrid"><div class="field"><label for="period">Check-in label</label><input id="period" placeholder="Week 1 or September review" required></div><div class="field"><label for="checkDate">Date</label><input id="checkDate" type="date" required></div></div>
+        <div class="numbers" style="margin-top:17px"><div class="field"><label for="leads">New leads</label><input id="leads" type="number" min="0" value="0"></div><div class="field"><label for="clients">Regular clients</label><input id="clients" type="number" min="0" value="0"></div><div class="field"><label for="walks">Walks completed</label><input id="walks" type="number" min="0" value="0"></div><div class="field"><label for="revenue">Revenue</label><input id="revenue" type="number" min="0" step=".01" value="0"></div><div class="field"><label for="expenses">Expenses</label><input id="expenses" type="number" min="0" step=".01" value="0"></div><div class="field"><label for="energy">Energy afterward</label><select id="energy"><option value="">Choose 1–5</option><option>1 — depleted</option><option>2 — tired</option><option>3 — manageable</option><option>4 — good</option><option>5 — strong</option></select></div></div>
+        <div class="field" style="margin-top:17px"><label for="lesson">What did we learn?</label><textarea id="lesson" placeholder="A response, success, physical limit, or marketing insight"></textarea></div>
+        <div class="field" style="margin-top:17px"><label for="nextStep">What is the next small experiment?</label><textarea id="nextStep" placeholder="One action that can create useful evidence"></textarea></div>
+        <div class="formActions"><button class="cta" type="submit">Save check-in</button><span id="checkSaved" class="saved"></span></div>
+      </form>
+      <aside class="panel"><h3 style="margin-top:0">Progress history</h3><div id="history" class="history"></div></aside>
+    </div>
+  </div>
+</section>
+<section id="tools" class="section band">
+  <div class="wrap">
+    <div class="kicker" style="color:#9ce7b5">Project handoff</div>
+    <h2>Keep the work portable.</h2>
+    <p class="intro">Copy a plain-language update, download the project record, or print the current map. You do not need to use any particular business or AI platform.</p>
+    <div class="toolRow"><button class="cta" id="copySummary" type="button">Copy progress summary</button><button class="cta alt" id="downloadData" type="button">Download project record</button><button class="cta alt" id="printPage" type="button">Print / save as PDF</button><label class="cta alt" for="importData">Restore project record</label><input id="importData" type="file" accept="application/json" hidden></div>
+    <div id="toolStatus" class="saved" style="color:#b8f0c9;margin-top:12px"></div>
+    <p class="privacy">Entries are saved in this browser on this device. The public page does not automatically send private answers or sync them across devices. Copy or download only when you intentionally want to share an update.</p>
+  </div>
+</section>
+</main>
+<footer>
+<div class="wrap">Happy Paws • Dog Walking Preparation Lab • Pre-launch prototype</div>
+</footer>
+<script>
+const ACCESS_HASH='cce97db6564e7aad69915d5b7a53e035456770d9a65daf71e3feb1d66ceb5c55';
+const accessForm=document.getElementById('accessForm'),accessSurname=document.getElementById('accessSurname'),accessError=document.getElementById('accessError');
+function hex(buffer){return [...new Uint8Array(buffer)].map(x=>x.toString(16).padStart(2,'0')).join('')}
+async function tryAccess(event){event.preventDefault();const value=accessSurname.value.trim().toLowerCase();const digest=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(value));if(hex(digest)===ACCESS_HASH){document.body.classList.remove('access-locked');document.body.classList.add('accessGranted');sessionStorage.setItem('happyPawsAccess','granted');accessError.textContent='';document.getElementById('profile').scrollIntoView({behavior:'smooth'})}else{accessError.textContent='That last name did not match. Please try again.';accessSurname.select()}}
+accessForm.addEventListener('submit',tryAccess);
+if(sessionStorage.getItem('happyPawsAccess')==='granted'){document.body.classList.remove('access-locked');document.body.classList.add('accessGranted')}
+const callBtn=document.getElementById('call'),hangBtn=document.getElementById('hang'),micBtn=document.getElementById('mic'),statusEl=document.getElementById('status'),transcript=document.getElementById('transcript');let active=false,turn=0;function addMsg(who,text){const d=document.createElement('div');d.className='msg';d.innerHTML=`<span class="who">${who}:</span> ${text}`;transcript.appendChild(d);transcript.scrollTop=transcript.scrollHeight}function speak(text){if(!('speechSynthesis'in window))return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.rate=1.02;u.pitch=1.05;speechSynthesis.speak(u)}function reply(userText=''){const t=userText.toLowerCase();let r;if(turn===0)r="Hi! Thanks for calling. I'm looking for someone to walk my dog Bella on Tuesdays and Thursdays. Do you have availability?";else if(t.includes('yes')||t.includes('available')||t.includes('tuesday')||t.includes('thursday'))r="Great. Bella is friendly with people, but she gets nervous around larger dogs. How would you handle that?";else if(t.includes('price')||t.includes('cost')||t.includes('charge'))r="I was hoping to stay around twenty dollars per walk. Is that close to your rate?";else if(t.includes('safe')||t.includes('leash')||t.includes('nervous')||t.includes('dog'))r="That makes me feel better. Could we start with one thirty-minute walk this Thursday and see how it goes?";else if(t.includes('thursday')||t.includes('thirty')||t.includes('30'))r="Perfect. Thursday works. Thanks, I feel a lot better about trying this.";else r=["What would you recommend for a first visit?","How long is a normal walk?","What do you need from me before the first walk?","Could we try one walk first?"][Math.min(turn-1,3)];turn++;addMsg('Sarah',r);speak(r);statusEl.textContent='Connected'}function start(){active=true;turn=0;statusEl.textContent='Connected';callBtn.style.display='none';hangBtn.style.display='inline-block';micBtn.style.display='inline-block';setTimeout(()=>reply(),400)}function end(){active=false;statusEl.textContent='Call ended';hangBtn.style.display='none';micBtn.style.display='none';callBtn.style.display='inline-block';if('speechSynthesis'in window)speechSynthesis.cancel()}callBtn.onclick=start;hangBtn.onclick=end;const SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(SR){const rec=new SR();rec.lang='en-US';rec.interimResults=false;rec.maxAlternatives=1;rec.onstart=()=>statusEl.textContent='Listening…';rec.onerror=e=>statusEl.textContent='Mic error: '+e.error;rec.onend=()=>{if(active)statusEl.textContent='Connected'};rec.onresult=e=>{const text=e.results[0][0].transcript;addMsg('You',text);statusEl.textContent='Sarah is thinking…';setTimeout(()=>reply(text),450)};micBtn.onclick=()=>{if(active){try{rec.start()}catch(e){}}}}else{micBtn.onclick=()=>{if(!active)return;const text=prompt('Type your response to Sarah:');if(text){addMsg('You',text);reply(text)}}}
+const STORE='happyPawsLivingPreparationV3';
+const blank={fit:{owner:'',availability:'',dogCount:'',area:''},experiments:[],checkins:[]};
+let launchData=loadLaunch();
+function loadLaunch(){try{return Object.assign({},blank,JSON.parse(localStorage.getItem(STORE)||'{}'))}catch(e){return JSON.parse(JSON.stringify(blank))}}
+function saveLaunch(){localStorage.setItem(STORE,JSON.stringify(launchData));renderLaunch()}
+function fieldValue(id){return document.getElementById(id).value.trim()}
+function fieldNumber(id){return Number(document.getElementById(id).value||0)}
+function money(n){return new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:2}).format(Number(n)||0)}
+function notice(id,message){const el=document.getElementById(id);el.textContent=message;setTimeout(()=>{if(el.textContent===message)el.textContent=''},2800)}
+async function copyText(text,id){try{await navigator.clipboard.writeText(text);notice(id,'Copied.')}catch(e){prompt('Copy this text:',text)}}
+function hydrateFit(){['owner','availability','dogCount','area'].forEach(id=>document.getElementById(id).value=launchData.fit[id]||'')}
+function marketingDraft(){const f=launchData.fit;if(!Object.values(f).some(Boolean))return '';return `Happy Paws is developing a relationship-first dog-walking service for ${f.owner||'local dog owners who need dependable walking support'}${f.availability?` during ${f.availability}`:''}.${f.dogCount?` The service will begin with ${f.dogCount.toLowerCase()} so every walk receives focused attention.`:''}${f.area?` Service is being developed for ${f.area}.`:''} The goal is dependable recurring care, clear communication, and a safe beginning for every dog and owner.`}
+function renderFit(){const draft=marketingDraft(),box=document.getElementById('fitResult');box.hidden=!draft;document.getElementById('marketingDraft').textContent=draft}
+document.getElementById('fitForm').addEventListener('submit',e=>{e.preventDefault();launchData.fit={owner:fieldValue('owner'),availability:fieldValue('availability'),dogCount:fieldValue('dogCount'),area:fieldValue('area')};saveLaunch();notice('fitSaved','Answers saved. Draft created.')});
+document.getElementById('copyFit').addEventListener('click',()=>copyText(`Happy Paws Best-Fit Client answers
+1. Preferred client: ${fieldValue('owner')||'Not answered'}
+2. Availability: ${fieldValue('availability')||'Not answered'}
+3. Safe starting dog count: ${fieldValue('dogCount')||'Not answered'}
+4. Service area: ${fieldValue('area')||'Not answered'}`,'fitSaved'));
+document.getElementById('experimentForm').addEventListener('submit',e=>{e.preventDefault();const item={id:Date.now(),idea:fieldValue('classIdea'),channel:fieldValue('channel'),test:fieldValue('smallTest')};if(!item.idea&&!item.test)return notice('experimentSaved','Add an idea or test first.');launchData.experiments.unshift(item);e.target.reset();saveLaunch();notice('experimentSaved','Experiment added.')});
+function renderExperiments(){const root=document.getElementById('experimentList');root.replaceChildren();if(!launchData.experiments.length){const d=document.createElement('div');d.className='empty';d.textContent='No experiments yet. Start with one idea, one place, and one observable response.';return root.append(d)}launchData.experiments.forEach(x=>{const d=document.createElement('div'),b=document.createElement('b'),s=document.createElement('small');d.className='experiment';b.textContent=x.idea||'Marketing experiment';s.textContent=[x.channel,x.test].filter(Boolean).join(' • ');d.append(b,s);root.append(d)})}
+document.getElementById('checkDate').value=new Date().toISOString().slice(0,10);
+document.getElementById('checkForm').addEventListener('submit',e=>{e.preventDefault();launchData.checkins.unshift({id:Date.now(),period:fieldValue('period'),date:fieldValue('checkDate'),leads:fieldNumber('leads'),clients:fieldNumber('clients'),walks:fieldNumber('walks'),revenue:fieldNumber('revenue'),expenses:fieldNumber('expenses'),energy:fieldValue('energy'),lesson:fieldValue('lesson'),next:fieldValue('nextStep')});e.target.reset();document.getElementById('checkDate').value=new Date().toISOString().slice(0,10);['leads','clients','walks','revenue','expenses'].forEach(id=>document.getElementById(id).value=0);saveLaunch();notice('checkSaved','Check-in saved.')});
+function renderHistory(){const root=document.getElementById('history');root.replaceChildren();if(!launchData.checkins.length){const d=document.createElement('div');d.className='empty';d.textContent='No check-ins yet. The first saved entry begins the record.';return root.append(d)}launchData.checkins.forEach(x=>{const d=document.createElement('article'),h=document.createElement('header'),b=document.createElement('b'),sm=document.createElement('small'),p=document.createElement('p');d.className='historyItem';b.textContent=x.period||'Check-in';sm.textContent=x.date;p.textContent=`${x.clients} regular clients • ${x.leads} leads • ${x.walks} walks • ${money(x.revenue-x.expenses)} net`;h.append(b,sm);d.append(h,p);if(x.lesson){const q=document.createElement('p');q.textContent='Learned: '+x.lesson;d.append(q)}if(x.next){const q=document.createElement('p');q.textContent='Next: '+x.next;d.append(q)}root.append(d)})}
+function renderScore(){const x=launchData.checkins[0]||{clients:0,leads:0,walks:0,revenue:0,expenses:0};document.getElementById('clientDisplay').textContent=`${x.clients||0}/5`;document.getElementById('goalRing').style.setProperty('--progress',Math.min(100,(x.clients||0)*20));document.getElementById('leadTotal').textContent=x.leads||0;document.getElementById('walkTotal').textContent=x.walks||0;document.getElementById('profitTotal').textContent=money((x.revenue||0)-(x.expenses||0))}
+function progressSummary(){const f=launchData.fit,x=launchData.checkins[0],lines=['HAPPY PAWS — PRE-LAUNCH PREPARATION UPDATE','Future goal: 5 recurring clients and the beginning of profitability',`Preferred client: ${f.owner||'Still defining'}`,`Availability: ${f.availability||'Still defining'}`,`Safe dog count: ${f.dogCount||'Still defining'}`,`Service area: ${f.area||'Still defining'}`];if(x)lines.push('',`${x.period} (${x.date})`,`${x.leads} leads • ${x.clients} regular clients • ${x.walks} walks`,`Revenue ${money(x.revenue)} • Expenses ${money(x.expenses)} • Net ${money(x.revenue-x.expenses)}`,`Energy: ${x.energy||'Not recorded'}`,`Learning: ${x.lesson||'Not recorded'}`,`Next experiment: ${x.next||'Not recorded'}`);else lines.push('','No weekly check-in yet.');lines.push('',`Marketing experiments recorded: ${launchData.experiments.length}`);return lines.join('\n')}
+document.getElementById('copySummary').addEventListener('click',()=>copyText(progressSummary(),'toolStatus'));
+document.getElementById('downloadData').addEventListener('click',()=>{const blob=new Blob([JSON.stringify({project:'Happy Paws Living Preparation Map',exported:new Date().toISOString(),data:launchData},null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`happy-paws-progress-${new Date().toISOString().slice(0,10)}.json`;a.click();URL.revokeObjectURL(a.href);notice('toolStatus','Project record downloaded.')});
+document.getElementById('printPage').addEventListener('click',()=>window.print());
+document.getElementById('importData').addEventListener('change',e=>{const file=e.target.files[0];if(!file)return;const reader=new FileReader();reader.onload=()=>{try{const incoming=JSON.parse(reader.result);launchData=incoming.data||incoming;saveLaunch();hydrateFit();notice('toolStatus','Project record restored.')}catch(err){notice('toolStatus','That file could not be restored.')}};reader.readAsText(file)});
+function renderLaunch(){renderFit();renderExperiments();renderHistory();renderScore()}
+hydrateFit();renderLaunch();
+</script>
+</body>
+</html>
